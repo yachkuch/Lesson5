@@ -16,9 +16,13 @@ public:
     MainWindow(MainWindow &&other) = delete;
     MainWindow &operator=(const MainWindow &other) = delete;
     MainWindow &operator=(MainWindow &&other) = delete;
+    /// @brief Метод разворачивает сконфигурированное окно
+    void exec();
 
 private:
-    // Members
+
+    /// @brief Выплывающее меню
+    SelectMenuWidget select_menu;
 };
 
 #endif  // __MAIN_WINDOW_H_LHRGX6LRWPJV__

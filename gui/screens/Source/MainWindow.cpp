@@ -1,10 +1,13 @@
 #include "MainWindow.h"
 #include<iostream>
-MainWindow::MainWindow() {
-  std::cout<<"start"<<std::endl;
+MainWindow::MainWindow() :select_menu() {
 }
 
 MainWindow::~MainWindow()
 {
     
+}
+
+void MainWindow::exec(){
+
 }
