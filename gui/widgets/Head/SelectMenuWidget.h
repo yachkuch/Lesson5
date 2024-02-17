@@ -14,7 +14,7 @@ class SelectMenuWidget
 {
 public:
     SelectMenuWidget();
-    ~SelectMenuWidget(); // TODO: Is VIRTUAL needed?
+    ~SelectMenuWidget(); 
     SelectMenuWidget(const SelectMenuWidget &other) = delete;
     SelectMenuWidget(SelectMenuWidget &&other) = delete;
     SelectMenuWidget &operator=(const SelectMenuWidget &other) = delete;

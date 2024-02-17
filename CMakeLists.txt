@@ -12,6 +12,7 @@ set(SOURCES
     gui/screens/Source/MainWindow.cpp
     gui/widgets/Source/SelectMenuWidget.cpp
     gui/widgets/Source/Buttom.cpp
+    gui/widgets/Source/GraphicScene.cpp
     models/Source/AbstractModel.cpp
     models/Source/CircleCustom.cpp
     models/Source/RectangleCustom.cpp
@@ -21,6 +22,7 @@ set(HEAD
     gui/screens/Head/MainWindow.h
     gui/widgets/Head/SelectMenuWidget.h
     gui/widgets/Head/Buttom.h
+    gui/widgets/Head/GraphicScene.h
     models/Head/AbstractModel.h
     models/Head/CircleCustom.h
     models/Head/RectangleCustom.h
