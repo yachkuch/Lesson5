@@ -16,6 +16,8 @@ set(SOURCES
     models/Source/AbstractModel.cpp
     models/Source/CircleCustom.cpp
     models/Source/RectangleCustom.cpp
+    controller/Source/Controller.cpp
+    mode/Source/DataModel.cpp
 )
 
 set(HEAD 
@@ -26,6 +28,9 @@ set(HEAD
     models/Head/AbstractModel.h
     models/Head/CircleCustom.h
     models/Head/RectangleCustom.h
+    models/Head/Tipes_models.h
+    controller/Head/Controller.h
+    mode/Head/DataModel.h
 )
 
 add_executable(Vector_redactor ${SOURCES} ${HEAD})
@@ -34,6 +39,8 @@ target_include_directories(Vector_redactor PRIVATE
  gui/screens/Head gui/screens/Source
  gui/widgets/Head gui/widgets/Source
  models/Head      models/Source
+ controller/Head  controller/Source
+ mode/Head        mode/Source
  )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

@@ -9,10 +9,14 @@
 //#include <color>
 /// Для получения доступа к событиям кливиатуры и мыши
 #include <windows.h>
+
+#include "Tipes_models.h"
 class AbstractModel
 {
+    using Tipe = ModelTipes::eTipeModels;
+
 public:
-    AbstractModel();
+    AbstractModel(Tipe tipe = Tipe::NONE);
     virtual ~AbstractModel(); 
     AbstractModel(const AbstractModel &other);
     AbstractModel(AbstractModel &&other);
@@ -28,5 +32,6 @@ protected:
     int color = 0;
     int middle_point_x = 0;
     int middle_point_y = 0;
+    Tipe tipe = Tipe::NONE;
 };
 #endif  // __ABSTRACT_MODEL_H_R6MJ0U73GSKA__

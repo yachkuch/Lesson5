@@ -1,8 +1,8 @@
 #include "AbstractModel.h"
 
-AbstractModel::AbstractModel()
+AbstractModel::AbstractModel(Tipe tipe)
 {
-    // TODO: Needs implementation
+    this->tipe = tipe;
 }
 
 AbstractModel::AbstractModel(const AbstractModel& other)
