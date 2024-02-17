@@ -22,12 +22,11 @@ public:
     void eventHandler();
     /// @brief  Метод рисовки фигуры на экрне вызывается в том случае, если 
     /// с фигурой взаимодействовали
-    virtual void paintEvent() = 0;
+    virtual void paintEvent();
 
 protected:
     int color = 0;
     int middle_point_x = 0;
     int middle_point_y = 0;
 };
-
 #endif  // __ABSTRACT_MODEL_H_R6MJ0U73GSKA__

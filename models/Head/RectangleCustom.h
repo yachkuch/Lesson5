@@ -12,9 +12,9 @@ public:
     RectangleCustom();
     ~RectangleCustom() override;
     RectangleCustom(const RectangleCustom &other);
-    RectangleCustom(RectangleCustom &&other);
+    RectangleCustom(RectangleCustom &&other) noexcept;
     RectangleCustom &operator=(const RectangleCustom &other);
-    RectangleCustom &operator=(RectangleCustom &&other);
+    RectangleCustom &operator=(RectangleCustom &&other) noexcept;
 
     void paintEvent() override;
 private:

@@ -36,4 +36,10 @@ AbstractModel::~AbstractModel()
 {
     
 }
+void AbstractModel::paintEvent()
+{
+    
+}
+
+
 
