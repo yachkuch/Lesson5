@@ -1,33 +1,16 @@
 #include "SelectMenuWidget.h"
 
-using namespace std;
-
 SelectMenuWidget::SelectMenuWidget()
 {
-    // TODO: Needs implementation
+    configurateAllButtons();
 }
 
 SelectMenuWidget::~SelectMenuWidget()
 {
-    // TODO: Needs implementation
+   
 }
 
-SelectMenuWidget::SelectMenuWidget(const SelectMenuWidget& other)
+void SelectMenuWidget::configurateAllButtons()
 {
-    // TODO: Needs implementation
-}
-
-SelectMenuWidget::SelectMenuWidget(SelectMenuWidget&& other)
-{
-    // TODO: Needs implementation
-}
-
-SelectMenuWidget& SelectMenuWidget::operator=(const SelectMenuWidget &other)
-{
-    // TODO: Needs implementation
-}
-
-SelectMenuWidget& SelectMenuWidget::operator=(SelectMenuWidget &&other)
-{
-    // TODO: Needs implementation
+    // В общий контейнер кнопок происходит добавленеи самих кнопок
 }
