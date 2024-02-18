@@ -1,7 +1,5 @@
 #include "DataModel.h"
-
-using namespace std;
-
+namespace mod{
 DataModel::DataModel()
 {
     // TODO: Needs implementation
@@ -12,22 +10,9 @@ DataModel::~DataModel()
     // TODO: Needs implementation
 }
 
-DataModel::DataModel(const DataModel& other)
-{
-    // TODO: Needs implementation
+void DataModel::updateState(tipeResive tipe, std::unique_ptr<dataResive> data) {
 }
-
-DataModel::DataModel(DataModel&& other)
-{
-    // TODO: Needs implementation
-}
-
-DataModel& DataModel::operator=(const DataModel &other)
-{
-    // TODO: Needs implementation
-}
-
-DataModel& DataModel::operator=(DataModel &&other)
-{
-    // TODO: Needs implementation
-}
+void DataModel::setConnect(
+    std::function<void(tipeSend tipe, std::unique_ptr<dataSend> data)>
+        connectMethod) {}
+} // namespace mod

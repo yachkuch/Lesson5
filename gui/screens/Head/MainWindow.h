@@ -18,11 +18,20 @@ public:
     MainWindow &operator=(MainWindow &&other) = delete;
     /// @brief Метод разворачивает сконфигурированное окно
     void exec();
+    void updateState(int tipe, void *data);
 
 private:
 
+
+    //********** Методы класса 
+    void addNewDocument();
+
+
+
+    //**********Поля класса
     /// @brief Выплывающее меню
     SelectMenuWidget select_menu;
 };
+
 
 #endif  // __MAIN_WINDOW_H_LHRGX6LRWPJV__

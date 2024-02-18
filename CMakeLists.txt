@@ -31,6 +31,7 @@ set(HEAD
     models/Head/Tipes_models.h
     controller/Head/Controller.h
     mode/Head/DataModel.h
+    datatypes/dataType.h
 )
 
 add_executable(Vector_redactor ${SOURCES} ${HEAD})
@@ -41,7 +42,13 @@ target_include_directories(Vector_redactor PRIVATE
  models/Head      models/Source
  controller/Head  controller/Source
  mode/Head        mode/Source
+ datatypes
  )
+
+ set_target_properties(Vector_redactor  PROPERTIES
+    CXX_STANDARD 20
+    CXX_STANDARD_REQUIRED ON
+)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
