@@ -1,17 +1,44 @@
 #include <iostream>
-#include "MainWindow.h"
-#include "Controller.h"
-#include "DataModel.h"
-#include<functional>
-#include<memory>
-// #ifndef __DATA_TYPE_H_EHONJ2LKOE69__
-// #include "dataType.h"
-// #endif
-int main(int, char **) {
-  MainWindow main_window;
-  contr::Controller control;
-  mod::DataModel  model;
-  // control.setConnect(std::function<void(ClassCommunication::dataTipe::dataTypeModelUI tipe,
-  //  std::unique_ptr<dataSend> data)>(model::setConnect));
-  main_window.exec();
+#include "Main.h"
+
+struct first
+{
+    typedef std::function<void()>
+        event;
+
+    event setMethod;
+
+    template <typename F, class O>
+    void set(F method, O &obj)
+    {
+        setMethod = std::bind(method, std::ref(obj));
+    }
+
+    void work()
+    {
+        if (setMethod)
+            setMethod();
+        else
+            std::cout << "event not ready...\n";
+    }
+};
+
+struct second
+{
+    void work() { std::cout << "second::work\n"; }
+
+    void operator()() { work(); }
+};
+
+int main(int, char **)
+{
+    Main::Main a();
+
+    first f;
+    second s;
+
+    f.set( &second::work, s ); 
+    f.work();
+
+    system("pause");
 }

@@ -69,3 +69,6 @@ latex/Makefile
 latex/refman.tex
 latex/tabu_doxygen.sty
 man/man3/main.cpp.3
+connector/Head/.vscode/c_cpp_properties.json
+connector/Head/.vscode/launch.json
+connector/Head/.vscode/settings.json

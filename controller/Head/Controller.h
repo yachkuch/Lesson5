@@ -37,5 +37,5 @@ namespace contr
     private:
         std::function<void(tipeSend tipe, std::unique_ptr<dataSend> data)> sendFunc = nullptr;
     };
-}
+} // namespace contr
 #endif // __CONTROLLER_H_AIUQXMR86YVB__

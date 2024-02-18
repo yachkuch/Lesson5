@@ -18,6 +18,7 @@ set(SOURCES
     models/Source/RectangleCustom.cpp
     controller/Source/Controller.cpp
     mode/Source/DataModel.cpp
+    connector/Source/Main.cpp
 )
 
 set(HEAD 
@@ -32,6 +33,7 @@ set(HEAD
     controller/Head/Controller.h
     mode/Head/DataModel.h
     datatypes/dataType.h
+    connector/Head/Main.h
 )
 
 add_executable(Vector_redactor ${SOURCES} ${HEAD})
@@ -43,6 +45,7 @@ target_include_directories(Vector_redactor PRIVATE
  controller/Head  controller/Source
  mode/Head        mode/Source
  datatypes
+ connector/Head connector/Source
  )
 
  set_target_properties(Vector_redactor  PROPERTIES

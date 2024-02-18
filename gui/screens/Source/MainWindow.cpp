@@ -1,23 +1,29 @@
 #include "MainWindow.h"
-#include<iostream>
-#include<format>
-MainWindow::MainWindow() :select_menu() {
-}
+#include <iostream>
+#include <format>
 
-MainWindow::~MainWindow()
+namespace MainWind
 {
-    
-}
+    MainWindow::MainWindow() : select_menu()
+    {
+    }
 
-void MainWindow::exec(){
+    MainWindow::~MainWindow()
+    {
+    }
 
-}
+    void MainWindow::exec()
+    {
+    }
 
-void MainWindow::updateState(int tipe, void *data) {
+    // void MainWindow::updateState(tipeResive tipe, std::unique_ptr<dataResive> data)
+    // {
+    //     std::format("State model update ");
+    // }
 
-}
+    void MainWindow::addNewDocument()
+    {
+        std::format("Added new document utton press ");
+    }
 
-void MainWindow::addNewDocument()
-{
-    std::format("Added new document utton press ");
-}
+} // namespace Main

@@ -17,7 +17,8 @@ namespace mod
         using tipeResive = ClassCommunication::dataTipe::dataTypeControllerModel;
         using tipeSend = ClassCommunication::dataTipe::dataTypeModelUI;
         using dataResive = ClassCommunication::data::TypeControllerModel;
-        using dataSend = ClassCommunication::data::TypeControllerModel;
+        using dataSend = ClassCommunication::data::TypeModelUI;
+        using event = std::function<void(int tipe, std::unique_ptr<int> data)>;
 
     public:
         DataModel();
@@ -31,10 +32,16 @@ namespace mod
         /// @brief Метод который позволяет установить соединение с классом в который будет необходимо
         /// передать состояние контроллера
         /// @param connectMethod метод в который подключаемый класс будет получать имнформацию
-        void setConnect(std::function<void(tipeSend tipe, std::unique_ptr<dataSend> data)> connectMethod);
+        // void setConnect(std::function<void(tipeSend tipe, std::unique_ptr<dataSend> data)> connectMethod);
+        template <typename F, class O>
+        void setConnect(F method, O &obj)
+        {
+            //sendFunc = std::bind(method, std::ref(obj));
+        };
 
     private:
-        std::function<void(tipeSend tipe, std::unique_ptr<dataSend> data)> sendFunc = nullptr;
+        event sendFunc = nullptr;
     };
-}
+
+} // namespace mod
 #endif // __DATA_MODEL_H_AS3KIDREOXTF__
