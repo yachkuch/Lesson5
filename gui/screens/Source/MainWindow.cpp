@@ -4,26 +4,22 @@
 
 namespace MainWind
 {
-    MainWindow::MainWindow() : select_menu()
-    {
-    }
-
-    MainWindow::~MainWindow()
-    {
-    }
-
     void MainWindow::exec()
     {
     }
 
-    // void MainWindow::updateState(tipeResive tipe, std::unique_ptr<dataResive> data)
-    // {
-    //     std::format("State model update ");
-    // }
+    void MainWindow::updateState(int tipe, std::unique_ptr<ClassCommunication::data::TypeModelUI> data)
+    {
+        std::format("State model update ");
+    }
+    void MainWindow::initialize()
+    {
+        
+    }
 
     void MainWindow::addNewDocument()
     {
         std::format("Added new document utton press ");
     }
-
+    
 } // namespace Main

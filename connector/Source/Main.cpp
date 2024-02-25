@@ -9,6 +9,8 @@ namespace Main
         contr::Controller control;
         mod::DataModel model;
         model.setConnect(&MainWind::MainWindow::updateState,main_window);
+        main_window.setConnect(&mod::DataModel::updateState,control);
+        control.setConnect(&mod::DataModel::updateState,model);
         main_window.exec();
     }
 

@@ -11,6 +11,7 @@
 ///////////////////////////////////////////////////////////
 /// @brief MainWindow Класс главного окна в котором и идет работа с приложением
 ///
+/// TODO: Обязательно реализовать создание объектов с использованием фабричного метода проектирования
 namespace MainWind
 {
 #ifndef __DATA_TYPE_H_EHONJ2LKOE69__
@@ -24,16 +25,19 @@ namespace MainWind
         using dataResive = ClassCommunication::data::TypeModelUI;
         using dataSend = ClassCommunication::data::dataUIController;
         using update = std::function<void(tipeResive tipe, std::unique_ptr<dataResive> data)>;
+        using event = std::function<void(tipeSend tipe, std::unique_ptr<dataSend> data)>;
+
     public:
-        MainWindow();
-        ~MainWindow();
-        MainWindow(const MainWindow &other) = delete;
-        MainWindow(MainWindow &&other) = delete;
-        MainWindow &operator=(const MainWindow &other) = delete;
-        MainWindow &operator=(MainWindow &&other) = delete;
         /// @brief Метод разворачивает сконфигурированное окно
         void exec();
-        void updateState(int tipe, std::unique_ptr<int> data){};
+        void updateState(int tipe, std::unique_ptr<dataResive> data);
+        void initialize();
+         template <typename F, class O>
+        void setConnect(F method, O &obj)
+        {
+           auto sendFunc2 = std::bind(method, std::ref(obj),std::placeholders::_1, std::placeholders::_2);
+        };
+
 
     private:
         //********** Методы класса
@@ -42,6 +46,8 @@ namespace MainWind
         //**********Поля класса
         /// @brief Выплывающее меню
         SelectMenuWidget select_menu;
+        event sendFunc = nullptr;
+
     };
 
 } // namespace Main

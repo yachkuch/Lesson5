@@ -5,7 +5,7 @@
 #include "DataModel.h"
 #include <functional>
 #include <memory>
-
+#include<iostream>
 namespace Main
 {
 #ifndef __DATA_TYPE_H_EHONJ2LKOE69__
@@ -19,10 +19,9 @@ namespace Main
     public:
         Main();
         ~Main(); // TODO: Is VIRTUAL needed?
-        Main(const Main &other) = delete;
-        Main(Main &&other) = delete;
-        Main &operator=(const Main &other) = delete;
-        Main &operator=(Main &&other) = delete;
+        void run(){
+            std::cout<<"sdfkk"<<std::endl;
+        };
 
     private:
         // Members

@@ -33,16 +33,19 @@ namespace ClassCommunication
         /// @brief Сообщения между UI и контроллером
         union dataUIController
         {
+            int a;
         };
 
         /// @brief Сообщения между контроллером и моделью
         union TypeControllerModel
         {
+            int a;
         };
 
         /// @brief Сообщения между моделью и контроллером
         union TypeModelUI
         {
+            int a;
         };
     } // namespace data
 

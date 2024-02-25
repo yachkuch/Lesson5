@@ -11,7 +11,7 @@ namespace mod
         // TODO: Needs implementation
     }
 
-    void DataModel::updateState(tipeResive tipe, std::unique_ptr<dataResive> data)
+    void DataModel::updateState(tipeResive type, std::unique_ptr<dataResive> data)
     {
     }
 } // namespace mod

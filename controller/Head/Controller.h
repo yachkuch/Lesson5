@@ -17,14 +17,11 @@ namespace contr
         using tipeSend = ClassCommunication::dataTipe::dataTypeControllerModel;
         using dataResive = ClassCommunication::data::dataUIController;
         using dataSend = ClassCommunication::data::TypeControllerModel;
+        using event = std::function<void(int, std::unique_ptr<dataResive>)>;
 
     public:
         Controller();
         ~Controller();
-        Controller(const Controller &other) = delete;
-        Controller(Controller &&other) = delete;
-        Controller &operator=(const Controller &other) = delete;
-        Controller &operator=(Controller &&other) = delete;
         /// @brief Обновляет состояние
         /// @param tipe тип данных, пришедших на обновление
         /// @param data данные пришедшие для обновления
@@ -32,7 +29,11 @@ namespace contr
         /// @brief Метод который позволяет установить соединение с классом в который будет необходимо
         /// передать состояние контроллера
         /// @param connectMethod метод в который подключаемый класс будет получать имнформацию
-        void setConnect(std::function<void(tipeSend tipe, std::unique_ptr<dataSend> data)> connectMethod);
+        template <typename F, class O>
+        void setConnect(F method, O &obj)
+        {
+            auto sendFunc2 = std::bind(method, std::ref(obj), std::placeholders::_1, std::placeholders::_2);
+        };
 
     private:
         std::function<void(tipeSend tipe, std::unique_ptr<dataSend> data)> sendFunc = nullptr;

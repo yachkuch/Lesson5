@@ -15,10 +15,4 @@ namespace contr
     void Controller::updateState(tipeResive tipe, std::unique_ptr<dataResive> data)
     {
     }
-
-    void Controller::setConnect(
-        std::function<void(tipeSend tipe, std::unique_ptr<dataSend> data)> connectMethod)
-    {
-        this->sendFunc = connectMethod;
-    }
 }
