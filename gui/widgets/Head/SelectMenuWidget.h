@@ -38,7 +38,7 @@ enum class tipe_buttom : int{
 
 
     //******************Данные класса**************//
-    // std::map<tipe_buttom,Buttom> all_buttoms;
+     std::map<tipe_buttom,Buttom> all_buttoms;
 };
 
 

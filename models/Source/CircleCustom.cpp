@@ -1,37 +1,38 @@
 #include "CircleCustom.h"
 
-
-CircleCustom::CircleCustom()
+namespace Models
 {
-    // TODO: Needs implementation
-}
+    CircleCustom::CircleCustom()
+    {
+        // TODO: Needs implementation
+    }
 
-CircleCustom::~CircleCustom()
-{
-    // TODO: Needs implementation
-}
+    CircleCustom::~CircleCustom()
+    {
+        // TODO: Needs implementation
+    }
 
-CircleCustom::CircleCustom(const CircleCustom& other)
-{
-    // TODO: Needs implementation
-}
+    CircleCustom::CircleCustom(const CircleCustom &other)
+    {
+        // TODO: Needs implementation
+    }
 
-CircleCustom::CircleCustom(CircleCustom&& other)
-{
-    // TODO: Needs implementation
-}
+    CircleCustom::CircleCustom(CircleCustom &&other) noexcept
+    {
+        // TODO: Needs implementation
+    }
 
-CircleCustom& CircleCustom::operator=(const CircleCustom &other)
-{
-    // TODO: Needs implementation
-}
+    CircleCustom &CircleCustom::operator=(const CircleCustom &other)
+    {
+        // TODO: Needs implementation
+    }
 
-CircleCustom& CircleCustom::operator=(CircleCustom &&other)
-{
-    // TODO: Needs implementation
-}
+    CircleCustom &CircleCustom::operator=(CircleCustom &&other) noexcept
+    {
+        // TODO: Needs implementation
+    }
 
-void CircleCustom::paintEvent()
-{
-    
+    void CircleCustom::paintEvent()
+    {
+    }
 }

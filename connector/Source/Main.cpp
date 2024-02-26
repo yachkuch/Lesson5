@@ -16,7 +16,6 @@ namespace Main
 
     Main::~Main()
     {
-        // TODO: Needs implementation
     }
 
 } // namespace Main

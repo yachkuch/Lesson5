@@ -11,6 +11,8 @@
 #include <windows.h>
 
 #include "Tipes_models.h"
+
+namespace Models {
 class AbstractModel
 {
     using Tipe = ModelTipes::eTipeModels;
@@ -18,10 +20,10 @@ class AbstractModel
 public:
     AbstractModel(Tipe tipe = Tipe::NONE);
     virtual ~AbstractModel(); 
-    AbstractModel(const AbstractModel &other);
-    AbstractModel(AbstractModel &&other);
+    AbstractModel(const AbstractModel &other) ;
+    AbstractModel(AbstractModel &&other)noexcept;
     AbstractModel &operator=(const AbstractModel &other);
-    AbstractModel &operator=(AbstractModel &&other);
+    AbstractModel &operator=(AbstractModel &&other) noexcept;
     /// @brief Обработчик событий мыши и клавиатуры
     void eventHandler();
     /// @brief  Метод рисовки фигуры на экрне вызывается в том случае, если 
@@ -34,4 +36,5 @@ protected:
     int middle_point_y = 0;
     Tipe tipe = Tipe::NONE;
 };
+}  // namespace Models
 #endif  // __ABSTRACT_MODEL_H_R6MJ0U73GSKA__

@@ -19,7 +19,7 @@ namespace mod
         using tipeSend = ClassCommunication::dataTipe::dataTypeModelUI;
         using dataResive = ClassCommunication::data::TypeControllerModel;
         using dataSend = ClassCommunication::data::TypeModelUI;
-        using event = std::function<void(int , std::unique_ptr<dataResive> )>;
+        using event = std::function<void(int , std::unique_ptr<dataSend> )>;
 
     public:
         DataModel();

@@ -8,11 +8,7 @@ class Buttom
 {
 public:
     Buttom();
-    virtual ~Buttom() = 0; 
-    Buttom(const Buttom &other) = delete;
-    Buttom(Buttom &&other) = delete;
-    Buttom &operator=(const Buttom &other) = delete;
-    Buttom &operator=(Buttom &&other) = delete;
+    virtual ~Buttom() = default; 
 
 private:
     // Members

@@ -6,19 +6,22 @@
 ///////////////////////////////////////////////////////////
 /// @brief RectangleCustom
 ///
-class RectangleCustom final: public AbstractModel
+namespace Models
 {
-public:
-    RectangleCustom();
-    ~RectangleCustom() override;
-    RectangleCustom(const RectangleCustom &other);
-    RectangleCustom(RectangleCustom &&other) noexcept;
-    RectangleCustom &operator=(const RectangleCustom &other);
-    RectangleCustom &operator=(RectangleCustom &&other) noexcept;
+    class RectangleCustom final : public AbstractModel
+    {
+    public:
+        RectangleCustom();
+        ~RectangleCustom() override;
+        RectangleCustom(const RectangleCustom &other);
+        RectangleCustom(RectangleCustom &&other) noexcept;
+        RectangleCustom &operator=(const RectangleCustom &other);
+        RectangleCustom &operator=(RectangleCustom &&other) noexcept;
 
-    void paintEvent() override;
-private:
-    // Members
-};
+        void paintEvent() override;
 
-#endif  // __RECTANGLECustom_H_X4TRJOVHTSI7__
+    private:
+        // Members
+    };
+}
+#endif // __RECTANGLECustom_H_X4TRJOVHTSI7__

@@ -21,7 +21,7 @@ public:
 
 private:
     /// @brief  Хранилище для всех элементов находящихся на сцене
-    std::map<int, AbstractModel> all_models;
+    std::map<int, Models::AbstractModel> all_models;
 };
 
 #endif  // __GRAPHIC_SCENE_H_KBPFU3A46E6S__
