@@ -29,12 +29,12 @@ namespace MainWind
     {
         switch (type)
         {
-        case 1:
+        case (int)tipeSend::NEW_VIEW:
         {
-            std::unique_ptr<Models::CircleCustom> cirlce = std::make_unique<Models::CircleCustom>();
+            std::unique_ptr<dataSend> cirlce = std::make_unique<dataSend>();
             if (sendFunc)
             {
-               // sendFunc(tipeSend::NEW_VIEW, std::move(cirlce));
+                sendFunc(tipeSend::NEW_VIEW, std::move(cirlce));
             }
             else
             {

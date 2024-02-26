@@ -18,7 +18,7 @@ class AbstractModel
     using Tipe = ModelTipes::eTipeModels;
 
 public:
-    AbstractModel(Tipe tipe = Tipe::NONE);
+    explicit AbstractModel (Tipe tipe = Tipe::NONE);
     virtual ~AbstractModel(); 
     AbstractModel(const AbstractModel &other) ;
     AbstractModel(AbstractModel &&other)noexcept;

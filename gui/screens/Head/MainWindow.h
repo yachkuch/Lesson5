@@ -7,7 +7,6 @@
 
 #include <functional>
 #include <memory>
-
 #ifndef __CIRCLECustom_H_3PMJVQ2DG8D4__
 #include"CircleCustom.h"
 #endif

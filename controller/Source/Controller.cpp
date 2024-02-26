@@ -15,4 +15,4 @@ namespace contr
     void Controller::updateState(tipeResive tipe, std::unique_ptr<dataResive> data)
     {
     }
-}
+} // namespace contr
